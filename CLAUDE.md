@@ -133,7 +133,7 @@ bose-search/
   How do I use tokio::spawn to run background tasks? use context7
   Create a Next.js 14 API route with middleware. use context7
   ```
-- **配置**: 已加入 `.mcp.json`
+- **註冊命令**: `claude mcp add context7 --scope user -- bunx @upstash/context7-mcp@latest`
 - **官網**: https://context7.com
 - **GitHub**: https://github.com/upstash/context7
 
