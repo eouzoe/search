@@ -102,7 +102,62 @@ bose-search/
 
 ---
 
-## 5. 文檔索引
+## 5. MCP 工具整合
+
+### 已整合的 MCP Servers
+
+#### 1. Bose Search (本專案)
+- **功能**: 網頁搜尋 (SearXNG 247 引擎)
+- **Tools**: `web_search`, `health_check`
+- **配置**: 見 `.mcp.json`
+
+#### 2. Context7 (Upstash)
+- **功能**: 即時程式庫文檔查詢
+- **用途**: 獲取最新、版本特定的 API 文檔和代碼範例
+- **使用方式**: 在 prompt 中加入 `use context7`
+- **範例**:
+  ```
+  How do I use tokio::spawn to run background tasks? use context7
+  Create a Next.js 14 API route with middleware. use context7
+  ```
+- **配置**: 已加入 `.mcp.json`
+- **官網**: https://context7.com
+- **GitHub**: https://github.com/upstash/context7
+
+#### 3. Exa (搜尋與代碼查詢)
+- **功能**: 網頁搜尋、公司研究、代碼文檔查詢
+- **Tools**:
+  - `web_search_exa` — 通用網頁搜尋
+  - `company_research_exa` — 公司資訊研究
+  - `get_code_context_exa` — GitHub/Stack Overflow/官方文檔搜尋
+- **用途**: 研究技術文檔、查找代碼範例、了解公司產品
+
+### 最佳實踐
+
+**自動觸發 Context7** — 在本文件加入規則：
+```
+Always use Context7 MCP when I need library/API documentation or code examples.
+Automatically add "use context7" to prompts about:
+- Rust crates (tokio, serde, reqwest, etc.)
+- Web frameworks (Next.js, React, Express, etc.)
+- Databases (MongoDB, PostgreSQL, Redis, etc.)
+```
+
+**指定版本**:
+```
+How do I use Next.js 14 app router? use context7
+Show me Rust tokio 1.35 spawn examples. use context7
+```
+
+**多庫查詢**:
+```
+Create a React component with TailwindCSS and fetch data from Supabase.
+use context7 for react, tailwindcss, supabase
+```
+
+---
+
+## 6. 文檔索引
 
 | 文檔 | 位置 | 說明 |
 |------|------|------|
