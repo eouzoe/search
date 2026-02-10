@@ -1,4 +1,21 @@
-/target
+# 環境變數和 API 金鑰
 .env
+.env.local
 *.key
 *.pem
+
+# Rust 編譯產物
+/target/
+**/*.rs.bk
+*.pdb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
