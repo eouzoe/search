@@ -1,0 +1,12 @@
+---
+source: crates/bose-common/src/types.rs
+expression: r
+---
+{
+  "title": "Test",
+  "url": "https://example.com",
+  "snippet": null,
+  "engine": "bing",
+  "score": null,
+  "category": "it"
+}

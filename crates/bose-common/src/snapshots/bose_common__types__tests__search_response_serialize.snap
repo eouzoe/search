@@ -1,0 +1,22 @@
+---
+source: crates/bose-common/src/types.rs
+expression: resp
+---
+{
+  "results": [
+    {
+      "title": "Rust",
+      "url": "https://rust-lang.org",
+      "snippet": "Fast",
+      "engine": "google",
+      "score": 1.0,
+      "category": "general"
+    }
+  ],
+  "query": "rust",
+  "elapsed_seconds": 0.5,
+  "total_results": 100,
+  "engines_used": [
+    "google"
+  ]
+}

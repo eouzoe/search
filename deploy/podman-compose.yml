@@ -1,0 +1,12 @@
+version: '3'
+services:
+  searxng:
+    image: docker.io/searxng/searxng:latest
+    container_name: bose-searxng
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./searxng/settings.yml:/etc/searxng/settings.yml:ro
+    environment:
+      - SEARXNG_SECRET=bose-search-secret-key-change-me
+    restart: unless-stopped

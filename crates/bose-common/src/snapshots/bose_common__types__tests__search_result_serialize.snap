@@ -1,0 +1,12 @@
+---
+source: crates/bose-common/src/types.rs
+expression: r
+---
+{
+  "title": "Rust Lang",
+  "url": "https://rust-lang.org",
+  "snippet": "Systems programming",
+  "engine": "google",
+  "score": 0.95,
+  "category": "general"
+}
