@@ -179,3 +179,24 @@ use context7 for react, tailwindcss, supabase
 | SKILL.md | .claude/skills/web-search/ | Claude Code Skill 定義 |
 | podman-compose.yml | deploy/ | SearXNG 部署配置 |
 | settings.yml | deploy/searxng/ | SearXNG 引擎權重配置 |
+
+---
+
+## 3. QMD 演算法移植計劃
+
+以下演算法從 tobi/qmd 專案借鑑，需用 Rust 重新實作。
+詳細分析見 `reports/qmd-architecture-analysis.md`。
+
+### 已移植
+（無）
+
+### 待移植（Phase 2 開發時由 Sonnet 執行）
+
+| 演算法 | 目標檔案 | 優先級 | 工作量 |
+|--------|---------|--------|--------|
+| 查詢擴展跳過 | `crates/bose-mcp/src/router.rs` | P0 | 30min |
+| RRF 融合 | `crates/bose-common/src/fusion.rs` | P1 | 3-4h |
+| 位置感知混合 | `crates/bose-common/src/blending.rs` | P1 | 1-2h |
+| 內容去重 | `crates/bose-common/src/dedup.rs` | P1 | 2-3h |
+| 文檔分塊 | `crates/bose-common/src/chunker.rs` | P2 | 4-5h |
+| MCP 結構化回應 | `crates/bose-mcp/src/tools.rs` | P2 | 1h |
